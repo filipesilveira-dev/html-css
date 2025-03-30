@@ -1,0 +1,99 @@
+/*CSS reset*/
+*{  /* refere-se ao todo do documento*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #001f;
+    background-color: #f9f9f9;
+    text-align: justify;
+}
+
+/*Header*/
+header{  
+    padding: 20px;
+    background: linear-gradient(135deg, rgb(16, 16, 167), rgb(11, 6, 34));
+    color: #fafafa;
+    text-align: center;
+}
+
+a:hover{
+    color:  rgb(90, 20, 202);
+}
+
+ul{
+    list-style-type: none;
+}
+
+header h1{
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+header p{
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+header nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a{
+    color: #fafafa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Secão*/
+section{
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/*Secão*/
+article{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article h3{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: medium;
+    color: #001f;
+    font-weight: lighter;
+}
+
+/*Footer*/
+footer{
+    color: #838285;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color:  rgb(90, 20, 202);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="icon" href="weight-scale-solid.svg" type="image/svg" style="opacity: 0;"/>
+    <script src="script.js"></script>
+    <style>
+        main{
+            position: relative;
+            border: 1px transparent; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+            border-radius: 10px; width: fit-content; 
+            height: 500px; 
+            margin: 20px auto; 
+            padding: 10px 20px; 
+            background-color: #3f87a6;
+        }
+        
+        h1{
+            text-align: center; 
+            font-weight: lighter; 
+            border: 1px transparent black; 
+            border-radius: 10px; 
+            margin: 20px auto;
+            padding: 10px 20px;  
+            background-color: #ebf8e1;
+        }
+
+        .peso{
+            margin: 20px 20px 10px 20px;             
+            color: #fff;
+        }
+
+        .altura{
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .resultado{
+            text-align: center; 
+            border: 1px transparent black; 
+            border-radius: 10px; 
+            margin: 50px auto; 
+            padding: 10px 20px; 
+            background-color: #ebf8e1;
+        }
+
+        footer{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            color: #fff; 
+            text-align: center; 
+            font-size: 50%;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);">
+
+<main>
+    <h1>Calcule seu IMC</h1>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <div class="peso">    
+            <label for="peso">Digite seu peso (kg): </label>
+            <input type="number" id="peso" name="peso" required>
+        </div>
+
+        <div class="altura">
+            <label for="altura">Digite sua altura (m): </label>
+            <input type="number" id="altura" name="altura" required>
+        </div>
+
+        <button type="button" onclick="calcularImc()" style="margin-top: 20px;">Calcular IMC</button>
+
+        <div class="resultado"; style="background-color: #3f87a6; color: #fff;">
+            <p id="imcResultado"></p>
+            <p id="classificacaoResultado"></p>
+        </div>
+    </div> 
+
+    <footer>
+        <p>&copy; 2025 Filipe Silveira - Todos os direitos reservados</p>
+    </footer>
+</main>
+</body>
+</html>
+
