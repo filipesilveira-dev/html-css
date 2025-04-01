@@ -1,15 +1,27 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
 /* seletor universal utilizado para resetar todos os elemnentos*/
 *{
     margin: 0px;
     padding: 0px;
     font-size: 1em;
+    
 }
 
 html, body{
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--font1);
 }
 
 header{
@@ -20,8 +32,9 @@ header{
 }
 
 header > h1{
+    font-family: var(--fonte2);
     padding-top: 50px;
-    font-size: 10vw;
+    font-size: 10vw;/*traz responsividade para diferentes tamanhos de tela*/
     font-variant: small-caps;
     /*todas as letras maiúsclas, porém, diferente de text-transform: uppercase;, as primeiras letras ficam maiores (mais destacadas).*/
 }
@@ -46,6 +59,8 @@ section{
     line-height: 2em;
     /*acrescenta espaçamento duplo para facilitar a leitura entre linhas do texto da section*/
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
 }
 
 section.normal{
@@ -59,8 +74,14 @@ section.imagem{
 }
 
 section.imagem > p{
-    width: 400px; 
-    /*por padrão o width vai até o final da página. Especificando assim limita sua altura. É essencial caso seja inserida uma imagem no espaço lateral antes ocupado pelo parágrafo da section.imagem*/
+    display: inline-block; /*ajusta a box para o tamanho do conteúdo, liberando o restante da largura para alguma imagem inserida*/
+    padding: 5px;
+    
+    
+    /*width: 400px; 
+    por padrão o width vai até o final da página. Especificando assim limita sua altura. É essencial caso seja inserida uma imagem no espaço lateral antes ocupado pelo parágrafo da section.imagem*/
+
+
     background-color: rgba(0, 0, 0, 0.253);
 }
 
