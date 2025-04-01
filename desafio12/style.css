@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* seletor universal utilizado para resetar todos os elemnentos*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
+header{
+    text-align: center;
+    background-color: black;
+    color: white;
+    
+}
+
+header > h1{
+    padding-top: 50px;
+    font-size: 10vw;
+    font-variant: small-caps;
+    /*todas as letras maiúsclas, porém, diferente de text-transform: uppercase;, as primeiras letras ficam maiores (mais destacadas).*/
+}
+
+header > p{
+    padding-bottom:  50px;
+}
+
+header  a, footer a{
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+/*[abaixo}traz responsividade para diferentes tipos de tela e prepara para inserir imagens paralaxe*/
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    /*acrescenta espaçamento duplo para facilitar a leitura entre linhas do texto da section*/
+    padding-left: 30px;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+section.imagem > p{
+    width: 400px; 
+    /*por padrão o width vai até o final da página. Especificando assim limita sua altura. É essencial caso seja inserida uma imagem no espaço lateral antes ocupado pelo parágrafo da section.imagem*/
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
