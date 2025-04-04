@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Teste</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+        table{
+            width: 500px;
+            border-collapse:collapse;
+            position: relative;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead, tfoot{
+        background-color: gray;
+        color: white;
+        }  
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+
+            /* Por meio da configuração acima, juntamente com o position: relative; na <table>, o <th> contido no <tr> contido no <thead> permanece aparecendo enquanto a tabela aparecer na rolagem. Quando a tabela chega ao fim, o título especificado some também.
+                - position: stiky; -> cola o <th> no topo.
+                - top: -1px; -> estabelece a distânica do <th> para a margem top.
+                - background-color: gray; -> estabelece a cor de fundo do <th> especificado. */
+        }
+        tbody > tr:nth-child(even){
+            background-color: lightgray;
+            /* o :nth-child() é uma pseuso classe utilizada para "zebrar" tabelas. Ela utiliza parâmetros como:
+
+                - even: faz a alteração a partir da célula par (even = 'par' em inglês);
+                - odd: faz a alteração a partir da célula ímpar (odd = 'ímpar' em inglês);
+                - Xn: onde 'x' é um número inteiro que indicará quantas células serão alternadas até a alteração;
+                
+            No exemplo acima, a alteração é o background-color, mas poderia ser qualquer outra estilização.
+             */
+        }
+     .num{
+        text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Isso é um Teste</h1>
+    <table>
+        <caption>População das Unidades Federativas do Brasil</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+                <!-- O scope="col" informa semanticamente que o th (table header - título da tabela) se refere ao que está abaixo dele na coluna. Ou seja, se refere à coluna(col). No caso de "estado", refere-se aos estados abaixo dele, e no caso de população, aos números abixo dele -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acre</td>
+                <td class="num">830.018</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.127.683</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">733.759</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3.941.613</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.141.626</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8.794.381</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2.817.381</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.833.712</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7.056.495</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6.755.805</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.658.649</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.757.013</td>
+            </tr>            
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.539.989</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.121.025</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3.974.687</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.444.380</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.058.931</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.271.199</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16.055.174</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.302.729</td>
+            </tr>
+            <tr>
+                <td>Rio GRande do Sul</td>
+                <td class="num">11.882.965</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.581.196</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">636.707</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.610.361</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">44.411.238</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.210.004</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.511.460</td>
+            </tr>
+        </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row">Total de Habitantes</th>
+            <!-- O scope="row" informa semanticamente que o th (table header - título da tabela), nesse caso do <tfoot> se refere ao que está ao lado (direito) dele na linha. Ou seja, se refere à linha (row).-->
+
+            <td><strong>212.583.750</strong></td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>
