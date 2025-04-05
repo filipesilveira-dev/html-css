@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'idroid';
+    src: url (fontes/'idroid.otf') format(´opentype´);
+    font-weight: normal;
+    fonte-style: normal;
+}
+
+body{
+    font-family: 'idroid', sans-serif;
+    margin: 0px;
+    background-color: #9ffad9;
+}
+
+header{
+    color: white;
+    background-image: linear-gradient(to bottom, #28e49f, #037a4f);
+    width: 100vw;
+}
+
+header > h1{
+    text-align: center;  
+    margin-top: 0px;  
+    padding-top: 20px;
+}
+
+header > p{
+    text-align: center;
+}
+
+header > menu{
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+header > menu > span{
+    margin: 10px;
+}
+
+main{
+    margin: auto;
+    text-align: justify;
+    background-color: white;
+    width: 800px;
+    padding: 10px;
+    border-radius: 0px 0px 15px 15px;
+    
+}
+
+main > h1{
+    margin-top: 0px;
+}
+
+.titulo{
+    background-image: linear-gradient(to left, white, #9ffad9);
+    
+}
+
+.android{
+    text-align: center;
+}
+
+#video{
+    text-align: center;
+    background-color: #037a4f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*picture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+/*div*/  aside{
+    /*text-align: justify;*/
+    border-radius: 15px;
+    background-color: #9ffad9;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    
+    
+}
+
+/*div*/  aside > h3{
+    margin-left: 0px;
+    background-color: #04ac6e;
+    color: white;    
+    padding: 10px 0px 10px 10px;
+    border-radius: 15px 15px 0px 0px;
+    width: 790px;    
+}
+
+footer{
+    background-color: #037a4f;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    height: 20px;
+}
