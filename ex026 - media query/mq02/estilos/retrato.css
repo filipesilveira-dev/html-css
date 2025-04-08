@@ -1,3 +1,10 @@
 @charset "UTF-8";
 
-/* Aparelho em pé (retrato */
+/* Aparelho em pé (retrato) */
+
+/* Apenas alterações que são diferentes entre retrato e paisagem*/
+
+body{
+    background-image: url('../imagens/cev-portrait.jpg');
+    background-position: center bottom;
+}
