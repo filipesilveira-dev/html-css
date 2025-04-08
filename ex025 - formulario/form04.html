@@ -12,7 +12,8 @@
             <legend>Dados Pessoais</legend>
             <p>
                 <label for="inome">Nome: </label>
-                <input type="text" name="nome" id="inome" minlength="5" maxlength="20 required">
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" size="10
+                " autocomplete="name">
             </p>
             <p>
                 <label for="iemail">E-mail: </label>
@@ -20,10 +21,13 @@
             </p>
             <p>
                 <label for="itel">Telefone: </label>
-                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(d{2}\)\d{4,5}-\d{4}$">
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
             </p>
         </fieldset>
-
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
         <!-- Estudar mais sobre RegEx (expressões regulares) pattern -->
     </form>
 </body>
