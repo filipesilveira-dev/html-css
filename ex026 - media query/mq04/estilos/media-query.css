@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints - Recomendações W3C
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+/* Por meio da lógica de Mobile first, as mídias para dispositivos 
+móveis (telas pequenas e celular) já foram estabelecidas em suas propriedades no style.css, 
+restando elaborar o soutros tamanhos de tela
+*/
+
+@media print{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    body{
+        background-image: url('../imagens/back-print.jpg'); /* desnecessário, pois não é possível imprimir imagem de fundo*/       
+        
+    }
+
+    main{
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    main::after{
+        content: 'Essa impressão foi feita por meio do site www.cursoemvideo.com';
+    }
+}
+/* impressão */
+
+@media screen and (min-width:768px) and (max-width:992px){
+    body{
+        background-image: url('../imagens/back-tablet.jpg');
+    }
+
+    #phone{
+        display: none;
+    }
+
+    #tablet{
+        display: block;
+    }
+}
+/* tablet */
+
+@media screen and (min-width:992px) and (max-width:1200px){
+    body{
+        background-image: url('../imagens/back-pc.jpg');
+    }
+
+    #phone{
+        display: none;
+    }
+
+    #pc{
+        display: block;
+    }
+}
+/* desktop */
+
+@media screen and (min-width:1200px){
+    body{
+        background-image: url('../imagens/back-tv.jpg');
+    }
+
+    main{
+        width: 700px;
+    }
+
+    #phone{
+        display: none;
+    }
+
+    #tv{
+        display: block;
+    }
+}
+/* grandes telas */
