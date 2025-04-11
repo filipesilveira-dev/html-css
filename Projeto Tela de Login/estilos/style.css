@@ -31,14 +31,14 @@ main{
 #login{
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
+    top: 50%;    
     background-color: white;
     width: 250px;
     height: 500px;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459); 
+    
+    transform: translate(-50%, -50%);
 }
 
 #login > #imagem{
@@ -64,4 +64,87 @@ main{
 
 #formulario > p{
     font-size: 0.8em;
+}
+
+form > div.campo{
+    background-color: #5f2c82;
+    border: 2px solid #5f2c82;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+div.campo > label{
+    display: none;
+}
+
+div.campo > i{ /* inserir ícones */
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input{
+    background-color: #94cfcd;
+    font-size: 1em; /* tamanho normal */
+    width: calc(100% - 44px);
+    /* calc() é utilizado para calcular. No caso esá sendo calculado 100% - 44px. O 44px é por conta dos 40px do ícone a ser inserido da div campo - person e vpn_key */
+    height: 100%;    
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    /* Sempre fazer o transform na última linha do seletor */
+    transform: translateY(-12px);
+    /* arrasta o input 12px no eixo Y apenas (no caso 12px para cima) */
+}
+
+div.campo > input:focus-within{ /* pseudo-classe referente a quanto um elemento estiver selecionado. No caso, quando o input estiver selecionado (a caixa de digitar o email/senha), o fundo muda para branco*/
+    background-color: white;
+}
+
+form > input[type=submit]{
+    display: block;
+    /* atribui características de box ao elemento
+        - ocupa toda a largura
+    */
+    font-size: 1em;
+    width: 100%;
+    /* 100% da box <form>. Se fosse "vw", ocuparia da tela toda*/
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover{
+    background-color: #2d6462;
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #2d6462;
+    border:  1px solid #49a09d;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+form > a.botao:hover{
+    background-color: #6cd3cf;
+}
+
+form > a.botao > i{
+    font-size: 0.8em;
+    /* ícone de email */
 }
