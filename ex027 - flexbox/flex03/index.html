@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .conteiner{
+            background-color: salmon;
+            height: 300px;
+
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: nowrap; */
+
+            flex-flow: row nowrap;
+            /* Flex-flow é uma shorthand para flex-direction + flex-wrap */
+
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex: auto;
+            /* Flex: auto só funciona nos filhos (itens dentro do conteiner). Impede que fique espaço vazio no elemente pai. Os itens ocuparão todo o espeço. */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
+    </div>
+</body>
+</html>
