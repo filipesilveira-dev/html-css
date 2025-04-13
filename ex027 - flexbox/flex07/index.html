@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .conteiner{
+            background-color: salmon;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: auto;
+            /* lembrando que o padrão é stretch*/
+            height: 400px;
+        }
+
+        .item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item" style="align-self: self-end;">C</div>
+        <div class="item" style="order: -3;">D</div>
+        <div class="item" style="align-self: center;">E</div>
+        <div class="item" style="align-self: self-start;">F</div>
+        <div class="item" style="align-self: stretch;">G</div>
+        <!-- as estilizações também podem ser feitas atribuindo um valor de id ou class ao item e estilizando em css bloco ou externo -->
+    </div>
+</body>
+</html>
