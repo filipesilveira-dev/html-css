@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints - Recomendações W3C
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+/* Versão Mobile First */
+
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+    /* reset de navegadores */
+}
+
+body{
+    background-color: lightgrey;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    
+    background-color: gray;
+    /*height: 100px;*/
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    /* ao reduzir o tamanho da tela o bloco da esquerd (nav) irá para baixo do bloco da direita (h1) */
+    justify-content: space-between;
+    /* estabelece espaço entre os dois elementos presentes na box header: o h1 e o nav*/
+    align-items: center;
+    /* no eixo transversal, centraliza o conteúdo */
+}
+
+header > h1{
+    color: white;
+    /*text-shadow: 1px 1px 1px black;
+    padding: 10px;*/
+    border: 1px dotted black;
+    /* a borda pontilhada tem o objetivo de facilitar a visualização das boxes*/
+    flex: 0 0 200px;
+    /* estabelece que o h1 não cresce (primeiro 0), não encolhe (segundo zero) e mantém o tamanho de 200px */
+}
+
+nav{
+    border: 1px dotted black;
+    /* a borda pontilhada tem o objetivo de facilitar a visualização das boxes*/ 
+    display: flex;
+    /* trata-se de uma flexbox dentro de outra flexbox. No caso do nav sendo item da flebox header, existem outros itens dentro do nav, os quais podem ser configurados estabelecendo o display: flex; dentro de nav */
+    flex-flow: row wrap;
+    /* ao estabelecer o wrap, habilitando a quebra, os itens dentro de nav (opção 1, opção 2, opção 3,...) quebrar dentro da box conteiner (nav) e não dentro de header */
+    justify-content: flex-end;
+    /* estabelece que nav permanecerá "grudada" ao final de seu eixo principal */
+}
+
+nav a{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: white;
+    color: black;
+    transition: background-color .5s;
+}
+
+/*header > ul{
+    text-decoration: none;
+}
+
+header li{
+    color: white;
+    background-color: black;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#menu{
+    display: flex;
+    flex-flow: row-reverse;
+    
+}
+
+#cabecalho{
+    text-align: left;
+    
+}*/
+
+main{
+    background-color: white;
+    /*width: 95vw;*/
+    margin: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
+}

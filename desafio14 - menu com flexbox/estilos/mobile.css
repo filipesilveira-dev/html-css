@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+header{
+    flex-flow: column nowrap;
+}
+
+header > h1{
+    flex-basis: 50px;
+    /* flex-basis e outras propriedades só funcionaram ao acrescentar o "header > h1" antes */
+    
+}
+
+nav{
+    flex-flow: column nowrap;
+    width: 90vw;
+}
